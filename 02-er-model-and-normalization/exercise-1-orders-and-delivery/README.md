@@ -2,6 +2,10 @@
 
 This study note summarizes the supplied *Modelo relacional ejercicio 1* document. The source diagram models customers, delivery addresses, orders, factories, articles, and order details.
 
+## SQL implementation
+
+- [MySQL schema script](schema.sql) — creates the tables, primary keys, and foreign keys described below. Data types are implementation choices because the source exercise does not specify them.
+
 ## Relational schema
 
 | Table | Columns and keys |
