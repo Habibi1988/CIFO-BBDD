@@ -33,7 +33,7 @@ The course is organized into five training units (UF), totaling 200 hours.
 
 The following English study notes document the models, relationships, keys, cardinalities, and constraints from the provided coursework:
 
-- [Exercise 1 — Orders and Delivery Addresses](02-er-model-and-normalization/exercise-1-orders-and-delivery/README.md) — [SQL schema](02-er-model-and-delivery/schema.sql)
+- [Exercise 1 — Orders and Delivery Addresses](02-er-model-and-normalization/exercise-1-orders-and-delivery/README.md) — [SQL schema](02-er-model-and-normalization/exercise-1-orders-and-delivery/schema.sql)
 - [Exercise 2 — Invoices and Products](02-er-model-and-normalization/exercise-2-invoices-and-products/README.md) — [SQL schema](02-er-model-and-normalization/exercise-2-invoices-and-products/schema.sql)
 - [Exercise 3 — Roads (Carreteras)](02-er-model-and-normalization/exercise-3-roads/README.md)
 - [Exercise 4 — Flight System (Sistema de Vuelos)](02-er-model-and-normalization/exercise-4-flight-system/README.md)
