@@ -39,7 +39,7 @@ The following English study notes document the models, relationships, keys, card
 - [Exercise 4 — Flight System (Sistema de Vuelos)](02-er-model-and-normalization/exercise-4-flight-system/README.md)
 - [ER model and normalization section](02-er-model-and-normalization/README.md)
 
-**Source-file status:** The original Word documents, PDFs, and diagram images supplied for these exercises have been reviewed in this conversation but have not yet been uploaded as binary files to this repository. The exercise pages above are English study notes prepared from the supplied materials; they do not replace the original files. Several uploaded PDFs are visually identical copies of the same four-page combined exercise document, so only one should be retained when the source files are transferred.
+**Official assignment source:** The three-page PDF `Ejercicios Modelo Entidad/Relación` has been provided in this conversation and is the reference for Exercises 1–4. It has not yet been uploaded as a binary file to this repository. The exercise pages are English study notes, not replacements for the official assignment or original diagrams. Before transferring files, retain one copy of duplicate diagram PDFs and keep the distinct relational-model documents.
 
 ## Existing material
 
