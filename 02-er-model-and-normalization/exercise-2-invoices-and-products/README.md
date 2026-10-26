@@ -2,6 +2,10 @@
 
 This study note summarizes the supplied *Ejercicio 2 — Modelo relacional* document. The exercise transforms an E/R model for customer invoices, suppliers, products, and categories into relational tables.
 
+## SQL implementation
+
+- [MySQL schema script](schema.sql) — creates the tables, primary keys, and foreign keys described below. Data types are implementation choices because the source exercise does not specify them.
+
 ## Relational schema
 
 | Table | Columns and keys |
