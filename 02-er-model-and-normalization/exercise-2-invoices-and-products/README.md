@@ -1,39 +1,40 @@
-# Exercise 2 — Invoices, Customers, Suppliers, and Products
+# Exercise 2 — Sales System (Sistema de ventas)
 
-This study note summarizes the supplied *Ejercicio 2 — Modelo relacional* document. The exercise transforms an E/R model for customer invoices, suppliers, products, and categories into relational tables.
+This note follows the official three-page assignment, **Ejercicios Modelo Entidad/Relación**, Exercise 2. The task is to model a sales system that manages suppliers, customers, products, and sales invoices.
+
+## Requirements from the official statement
+
+- A supplier has CIF/NIF, name, address, telephone, and website.
+- A customer has CIF/NIF, name, address, and may have multiple contact telephone numbers.
+- An address consists of street, number, city, and postal code.
+- A product has a unique ID, name, current price, stock, and one supplier.
+- Products are grouped into categories; each product belongs to exactly one category.
+- A category has an ID, name, and description.
+- An invoice records its number, date, customer, discount, and final amount including VAT.
+- For each product sold, the system records the sale-time price, quantity sold, and total amount for that product line.
 
 ## SQL implementation
 
-- [MySQL schema script](schema.sql) — creates the tables, primary keys, and foreign keys described below. Data types are implementation choices because the source exercise does not specify them.
+- [MySQL schema script](schema.sql)
 
-## Relational schema
+The script defines supplier and customer CIF/NIF identifiers, a separate table for a customer's multiple telephone numbers, categories, products, invoices, and invoice detail lines.
 
-| Table | Columns and keys |
+## Relational design
+
+| Table | Purpose |
 |---|---|
-| `CLIENTE` | `id_cliente` (PK), `nombre`, `calle`, `numero`, `ciudad`, `codigo_postal` |
-| `CLIENTE_TELEFONO` | `id_cliente` (PK, FK), `telefono` (PK) |
-| `FACTURA` | `id_factura` (PK), `id_cliente` (FK), `direccion`, `descuento`, `importe`, `iva` |
-| `PROVEEDOR` | `id_proveedor` (PK), `nombre`, `calle`, `numero`, `ciudad`, `codigo_postal`, `telefono`, `pagina_web` |
-| `CATEGORIA` | `id_categoria` (PK), `nombre`, `descripcion` |
-| `PRODUCTO` | `id_producto` (PK), `nombre`, `precio_actual`, `stock`, `id_proveedor` (FK), `id_categoria` (FK) |
-| `DETALLE_FACTURA` | `id_factura` (PK, FK), `id_producto` (PK, FK), `cantidad`, `precio`, `importe_total` |
-| `FACTURA_PROVEEDOR` | `id_factura` (PK, FK), `id_proveedor` (PK, FK) |
+| `proveedor` | Supplier CIF/NIF, name, address, telephone, website |
+| `cliente` | Customer CIF/NIF, name, address |
+| `cliente_telefono` | Multiple contact telephone numbers per customer |
+| `categoria` | Category ID, name, description |
+| `producto` | Product details plus supplier and category foreign keys |
+| `factura` | Invoice number/date, customer, discount, final amount including VAT |
+| `detalle_factura` | Products on each invoice, sale-time price, quantity, line total |
 
-## Relationships and transformations
+The official statement does **not** specify a direct N:M relationship between invoices and suppliers, so the current SQL schema does not add an extra `factura_proveedor` table. A product references one supplier and one category, as required by the prompt.
 
-- **Customer–Telephone:** a multivalued telephone attribute is represented by `CLIENTE_TELEFONO`, with composite primary key `(id_cliente, telefono)`.
-- **Customer–Invoice (1:N):** `id_cliente` is stored as a foreign key in `FACTURA`.
-- **Invoice–Supplier (N:M):** represented by `FACTURA_PROVEEDOR` according to the supplied relational-model document.
-- **Supplier–Product (1:N):** `id_proveedor` is stored as a foreign key in `PRODUCTO`.
-- **Invoice–Product (N:M):** represented by `DETALLE_FACTURA`, which stores quantity, price, and total line amount.
-- **Product–Category (N:1):** `id_categoria` is stored as a foreign key in `PRODUCTO`.
+## Implementation notes
 
-## Notes
+The official statement does not dictate SQL data types or exact identifier names. Those are implementation choices in `schema.sql`. The script has been aligned to the written statement, but has not yet been executed against a MySQL server.
 
-The supplied document retains `importe_total` as a line attribute even though it could be calculated from quantity and price in a real implementation. The relationship between invoice and supplier is represented as an associative table because the source model indicates an N:M relationship.
-
-The exercise diagram and the relational schema document use some different labels. Review the instructor's expected naming and cardinalities before treating this as a final database implementation.
-
-## Original files
-
-The supplied source files are available in the current ChatGPT conversation but have not yet been uploaded as binary files to this GitHub repository.
+The original assignment PDF and diagram are not yet stored as binary files in this GitHub repository.
