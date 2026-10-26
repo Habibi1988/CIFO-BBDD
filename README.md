@@ -33,11 +33,13 @@ The course is organized into five training units (UF), totaling 200 hours.
 
 The following English study notes document the models, relationships, keys, cardinalities, and constraints from the provided coursework:
 
+- [Exercise 1 — Orders and Delivery Addresses](02-er-model-and-normalization/exercise-1-orders-and-delivery/README.md)
+- [Exercise 2 — Invoices and Products](02-er-model-and-normalization/exercise-2-invoices-and-products/README.md)
 - [Exercise 3 — Roads (Carreteras)](02-er-model-and-normalization/exercise-3-roads/README.md)
 - [Exercise 4 — Flight System (Sistema de Vuelos)](02-er-model-and-normalization/exercise-4-flight-system/README.md)
 - [ER model and normalization section](02-er-model-and-normalization/README.md)
 
-**Source-file status:** The original Word documents, PDF documents, and diagram images supplied for these exercises have not yet been uploaded to this repository. The exercise pages above are English study notes prepared from the supplied materials; they do not replace the original files.
+**Source-file status:** The original Word documents, PDFs, and diagram images supplied for these exercises have been reviewed in this conversation but have not yet been uploaded as binary files to this repository. The exercise pages above are English study notes prepared from the supplied materials; they do not replace the original files. Several uploaded PDFs are visually identical copies of the same four-page combined exercise document, so only one should be retained when the source files are transferred.
 
 ## Existing material
 
