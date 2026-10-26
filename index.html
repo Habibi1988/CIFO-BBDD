@@ -1,19 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CIFO BBDD</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SQL and relational database learning portfolio from CIFO La Violeta, Barcelona.">
+  <title>CIFO-BBDD | SQL & Relational Databases</title>
+  <style>
+    :root { color-scheme: light; --ink:#172033; --muted:#526176; --line:#dbe4ee; --blue:#075985; --pale:#f2f8fc; --white:#fff; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color:var(--ink); background:#f7fafc; line-height:1.6; }
+    a { color:var(--blue); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .wrap { max-width:1080px; margin:auto; padding:0 24px; }
+    header { background:linear-gradient(135deg,#e0f2fe,#f8fbff 70%); border-bottom:1px solid var(--line); }
+    nav { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:22px 0; }
+    .brand { font-weight:800; letter-spacing:-.03em; font-size:1.1rem; }
+    .nav-link { font-size:.94rem; font-weight:650; }
+    .hero { display:grid; grid-template-columns:1.4fr .6fr; align-items:center; gap:36px; padding:64px 0 72px; }
+    .eyebrow { color:var(--blue); font-weight:750; font-size:.82rem; text-transform:uppercase; letter-spacing:.12em; }
+    h1 { font-size:clamp(2.4rem,5vw,4.2rem); line-height:1.08; letter-spacing:-.055em; margin:12px 0 20px; }
+    .lead { max-width:680px; font-size:1.12rem; color:var(--muted); }
+    .hero img { width:150px; max-width:100%; justify-self:center; }
+    .buttons { display:flex; flex-wrap:wrap; gap:12px; margin-top:26px; }
+    .button { display:inline-block; padding:11px 16px; border-radius:10px; background:var(--blue); color:white; font-weight:700; }
+    .button.secondary { background:white; color:var(--blue); border:1px solid #b9d8e8; }
+    main { padding:46px 0 64px; }
+    section { margin:0 0 46px; }
+    h2 { font-size:1.7rem; letter-spacing:-.03em; margin:0 0 8px; }
+    .section-intro { color:var(--muted); margin:0 0 22px; }
+    .stats { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:-25px; position:relative; }
+    .stat, .card, .unit { background:var(--white); border:1px solid var(--line); border-radius:14px; padding:20px; }
+    .stat strong { display:block; font-size:1.5rem; letter-spacing:-.03em; }
+    .stat span { color:var(--muted); font-size:.93rem; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+    .card h3, .unit h3 { margin:0 0 7px; font-size:1.08rem; }
+    .card p, .unit p { color:var(--muted); margin:0 0 14px; }
+    .tag { display:inline-block; background:#e8f4fb; color:#075985; border-radius:999px; padding:3px 9px; font-size:.78rem; font-weight:750; margin-bottom:10px; }
+    .units { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+    .unit .hours { font-size:.85rem; font-weight:750; color:var(--blue); }
+    footer { border-top:1px solid var(--line); background:#fff; color:var(--muted); padding:24px 0; font-size:.9rem; }
+    @media(max-width:700px) { .hero { grid-template-columns:1fr; padding:45px 0 56px; } .hero img { grid-row:1; width:100px; justify-self:start; } .grid,.units { grid-template-columns:1fr; } .stats { grid-template-columns:1fr; margin-top:0; padding-top:20px; } nav { align-items:flex-start; } }
+  </style>
 </head>
 <body>
-    <h1>Titulo 1</h1>
-    <h2>Titulo 2</h2>
-    <h3>Titulo 3</h3>
-    <h4>Titulo 4</h4>
-    <h5>Titulo 5</h5>
-    <h6>Titulo 6</h6>
-    <p>párrafo</p>
-    <a href="./articulos-encargos/ejercicio 1.pdf" target="_blank" rel="noopener noreferrer">Ejercicio</a>
-    <img src="./img/database.svg" alt="icono de bbdd">
+<header>
+  <div class="wrap">
+    <nav aria-label="Main navigation">
+      <a class="brand" href="./">CIFO-BBDD</a>
+      <a class="nav-link" href="https://github.com/Habibi1988/CIFO-BBDD">View repository ↗</a>
+    </nav>
+    <div class="hero">
+      <div>
+        <div class="eyebrow">Learning portfolio · Barcelona, Spain</div>
+        <h1>SQL &amp; Relational Database Design</h1>
+        <p class="lead">A practical record of my 200-hour database programming course at CIFO La Violeta: from Entity–Relationship diagrams and relational modeling to SQL queries and database programming.</p>
+        <div class="buttons">
+          <a class="button" href="https://github.com/Habibi1988/CIFO-BBDD">Explore on GitHub</a>
+          <a class="button secondary" href="./articulos-encargos/ejercicio%201.pdf">Open existing exercise PDF</a>
+        </div>
+      </div>
+      <img src="./img/database.svg" alt="Illustration of a relational database">
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="stats" aria-label="Course summary">
+    <div class="stat"><strong>200 hours</strong><span>Total course duration</span></div>
+    <div class="stat"><strong>5 units</strong><span>Design, modeling, SQL and programming</span></div>
+    <div class="stat"><strong>MySQL</strong><span>Course database platform</span></div>
+  </div>
+</div>
+
+<main class="wrap">
+  <section id="exercises">
+    <h2>ER and relational-model exercises</h2>
+    <p class="section-intro">English study notes based on the course diagrams and relational-model documents. Original source files will be added as separate downloads when binary upload is available.</p>
+    <div class="grid">
+      <article class="card">
+        <span class="tag">Exercise 1</span>
+        <h3>Orders and delivery addresses</h3>
+        <p>Customers, orders, delivery addresses, factories, articles, and order details; primary keys, foreign keys, and associative tables.</p>
+        <a href="./02-er-model-and-normalization/exercise-1-orders-and-delivery/README.md">Read study notes →</a>
+      </article>
+      <article class="card">
+        <span class="tag">Exercise 2</span>
+        <h3>Invoices and products</h3>
+        <p>Customers, invoices, suppliers, products, categories, telephone numbers, and invoice line items.</p>
+        <a href="./02-er-model-and-normalization/exercise-2-invoices-and-products/README.md">Read study notes →</a>
+      </article>
+      <article class="card">
+        <span class="tag">Exercise 3</span>
+        <h3>Road network</h3>
+        <p>Autonomous communities, provinces, roads, road sections, endpoints, and junctions.</p>
+        <a href="./02-er-model-and-normalization/exercise-3-roads/README.md">Read study notes →</a>
+      </article>
+      <article class="card">
+        <span class="tag">Exercise 4</span>
+        <h3>Flight system</h3>
+        <p>Airports, aircraft models, scheduled routes, flights, and stopovers.</p>
+        <a href="./02-er-model-and-normalization/exercise-4-flight-system/README.md">Read study notes →</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="curriculum">
+    <h2>Course roadmap</h2>
+    <p class="section-intro">The five units below follow the course outline.</p>
+    <div class="units">
+      <article class="unit"><h3>01 · Relational database design</h3><p>Analyze information needs and develop a conceptual database design.</p><div class="hours">30 hours</div><a href="./01-relational-database-design/README.md">Open section →</a></article>
+      <article class="unit"><h3>02 · ER model and normalization</h3><p>Map ER diagrams to relational schemas, define constraints, and normalize to 3NF.</p><div class="hours">30 hours</div><a href="./02-er-model-and-normalization/README.md">Open section →</a></article>
+      <article class="unit"><h3>03 · Data Definition Language (DDL)</h3><p>Create and modify database structures and schema objects.</p><div class="hours">40 hours</div><a href="./03-ddl/README.md">Open section →</a></article>
+      <article class="unit"><h3>04 · Data Manipulation Language (DML)</h3><p>Query and manipulate data, join tables, and use aggregation.</p><div class="hours">50 hours</div><a href="./04-dml-and-queries/README.md">Open section →</a></article>
+      <article class="unit"><h3>05 · Database programming</h3><p>Practice database objects such as triggers and stored procedures.</p><div class="hours">50 hours</div><a href="./05-database-programming/README.md">Open section →</a></article>
+    </div>
+  </section>
+
+  <section id="tools">
+    <h2>Tools</h2>
+    <p class="section-intro">The course materials reference MySQL 8.4 LTS, MySQL Workbench, and Visual Studio Code.</p>
+    <div class="buttons">
+      <a class="button secondary" href="https://dev.mysql.com/downloads/mysql/">MySQL Community Server ↗</a>
+      <a class="button secondary" href="https://dev.mysql.com/downloads/workbench/">MySQL Workbench ↗</a>
+      <a class="button secondary" href="https://code.visualstudio.com/">Visual Studio Code ↗</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">CIFO-BBDD · SQL and relational database learning portfolio · <a href="https://github.com/Habibi1988/CIFO-BBDD">GitHub repository</a></div>
+</footer>
 </body>
 </html>
