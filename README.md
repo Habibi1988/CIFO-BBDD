@@ -20,15 +20,28 @@ The course is organized into five training units (UF), totaling 200 hours.
 | UF05 | Database Programming | 50 | Work with database objects such as triggers and stored procedures, and study query performance. |
 | **Total** | | **200** | |
 
-## Repository contents
+## Repository structure
 
-The repository is being organized around the course units and practical assignments. As work progresses, it will include relevant SQL scripts, ER diagrams, relational schemas, normalization exercises, database definitions, queries, and project documentation.
+- [01 — Relational Database Design](01-relational-database-design/README.md)
+- [02 — ER Model and Normalization](02-er-model-and-normalization/README.md)
+- [03 — Data Definition Language (DDL)](03-ddl/README.md)
+- [04 — Data Manipulation Language (DML) and Queries](04-dml-and-queries/README.md)
+- [05 — Database Programming](05-database-programming/README.md)
+- [Supporting documentation](docs/README.md)
 
-Current material:
+## ER and relational-model exercises
 
-- [Course assignment PDF](articulos-encargos/ejercicio%201.pdf)
+The following English study notes document the models, relationships, keys, cardinalities, and constraints from the provided coursework:
 
-Additional exercises may cover topics such as the database life cycle, sales, roads, and flights, where these match the coursework provided by the instructor.
+- [Exercise 3 — Roads (Carreteras)](02-er-model-and-normalization/exercise-3-roads/README.md)
+- [Exercise 4 — Flight System (Sistema de Vuelos)](02-er-model-and-normalization/exercise-4-flight-system/README.md)
+- [ER model and normalization section](02-er-model-and-normalization/README.md)
+
+**Source-file status:** The original Word documents, PDF documents, and diagram images supplied for these exercises have not yet been uploaded to this repository. The exercise pages above are English study notes prepared from the supplied materials; they do not replace the original files.
+
+## Existing material
+
+- [Existing course assignment PDF](articulos-encargos/ejercicio%201.pdf)
 
 ## Learning roadmap
 
@@ -45,19 +58,13 @@ Additional exercises may cover topics such as the database life cycle, sales, ro
 
 ## Tools and setup
 
-The course materials reference:
-
-- **MySQL 8.4 LTS**
-- **MySQL Workbench**
-- **Visual Studio Code**
-
-Installation links:
+The course materials reference **MySQL 8.4 LTS**, **MySQL Workbench**, and **Visual Studio Code**.
 
 - [MySQL Community Server](https://dev.mysql.com/downloads/mysql/)
 - [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
 - [Visual Studio Code](https://code.visualstudio.com/)
 
-Exact installation steps and version requirements should follow the instructor's current course guidance.
+Follow the instructor's current course guidance for exact installation steps and version requirements.
 
 ## How to use this repository
 
@@ -70,7 +77,7 @@ Exact installation steps and version requirements should follow the instructor's
 
 This repository is both a record of my learning and a practical portfolio artifact. It is intended to demonstrate database design, SQL querying, data integrity, and database programming skills relevant to data analysis and business intelligence roles.
 
-All exercises and projects will be documented as they are completed. Course assignments are learning materials; any future portfolio projects will clearly describe their scope, schema, queries, and findings.
+Exercises and projects will be documented as they are completed. Course assignments are learning materials; any future portfolio projects will clearly describe their scope, schema, queries, and findings.
 
 ---
 
